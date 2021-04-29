@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+nav {
+    background-color: rgba(0,0,0,.9);
+    padding: 1rem;
+}
+
 nav a {
     text-align: center;
     background-color: #000;
@@ -11,20 +16,54 @@ nav a {
     display: block;
     text-decoration: none;
     font-family: monospace;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
 }
 nav a.active {
-    border: 1px solid #808080;
+    border: 1px solid hsla(0,0%,100%,.2);
     border-radius: 9999px;
 }
 
-a:hover {
-    color: #808080;
+nav a:hover {
+    color:hsl(0, 0%, 77%);
 }
 
 .active:hover {
     background-color: #fff;
     color: #000;
-    transition: background-color .15s ease-in-out
+    transition: color .15s ease-in-out
+}
+
+@media (min-width: 768px) {
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+}
+
+@media (min-width: 768px) {
+
+    nav a {
+      float: right;
+    }
+  
+    .home {
+      float: left;
+    }
+  
+}
+
+@media (min-width: 768px) {
+
+    /* Clearfix */
+      nav::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  
 }
 
