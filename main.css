@@ -1,0 +1,30 @@
+/* ==== GENERAL STYLES ==== */
+
+* {
+    box-sizing: border-box;
+}
+
+nav a {
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-family: monospace;
+    padding: 1rem 1rem;
+}
+nav a.active {
+    border: 1px solid #808080;
+    border-radius: 9999px;
+}
+
+a:hover {
+    color: #808080;
+}
+
+.active:hover {
+    background-color: #fff;
+    color: #000;
+    transition: background-color .15s ease-in-out
+}
+
